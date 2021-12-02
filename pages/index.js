@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 
 export default function Home() {
@@ -14,12 +15,31 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          kaede-site
-        </h1>
+        <Typography variant="caption" display="block" gutterBottom>
+          エンジニア
+        </Typography>
+        <Typography variant="h4" gutterBottom component="div">
+          カエデ (kaede0902)
+        </Typography>
+        <Typography variant="h5" gutterBottom component="div">
+          公式サイト
+        </Typography>
 
         <p className={styles.description}>
-          Welcome!
+          
+        </p>
+
+        <Typography variant="caption" display="block" gutterBottom>
+          Web Developer
+        </Typography>
+        <Typography variant="h4" gutterBottom component="div">
+          kaede (kaede0902)
+        </Typography>
+        <Typography variant="h5" gutterBottom component="div">
+          Offical Web Site
+        </Typography>
+        <p className={styles.description}>
+          WELCOME.
         </p>
         <Button
           href={wishListUrl}
