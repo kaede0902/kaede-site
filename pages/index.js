@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Button from '@material-ui/core/Button';
+import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 
 export default function Home() {
+  const wishListUrl = "https://www.amazon.jp/hz/wishlist/ls/249DH0KL7DT0K?ref_=wl_share"
   return (
     <div className={styles.container}>
       <Head>
@@ -12,13 +15,23 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          kaede-site
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Welcome!
         </p>
+        <Button
+          href={wishListUrl}
+          variant="contained"
+          size='large'
+          style={{
+            background: 'yellow',
+          }}
+        >
+          Buy me a coffee!
+          <EmojiFoodBeverageIcon />
+        </Button>
       </main>
     </div>
   )
