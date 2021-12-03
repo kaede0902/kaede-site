@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
+import { Icon } from '@iconify/react';
+
 
 export default function Home() {
   const wishListUrl = "https://www.amazon.jp/hz/wishlist/ls/249DH0KL7DT0K?ref_=wl_share"
@@ -41,17 +43,40 @@ export default function Home() {
         <p className={styles.description}>
           WELCOME.
         </p>
+
         <Button
           href={wishListUrl}
           variant="contained"
           size='large'
           style={{
             background: 'yellow',
+            marginBottom: '12px'
           }}
         >
           Buy me a coffee!
           <EmojiFoodBeverageIcon />
         </Button>
+
+
+        <Typography variant="h6" gutterBottom component="div"
+            style={{
+              color: 'white',
+              background: '#7289d9',
+              padding: '3px 6px'
+            }}
+        >
+          Discrod: kaede0902#6521
+          <Icon icon="mdi:discord" 
+            width=""
+            style={{
+              color: 'white',
+              background: '#7289d9',
+            marginBottom: '-4px'
+            }}
+          />
+        </Typography>
+ 
+        
       </main>
     </div>
   )
