@@ -3,11 +3,13 @@ import styles from '../styles/Home.module.css'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
+import LogoDevIcon from '@mui/icons-material/LogoDev';
 import { Icon } from '@iconify/react';
 
 
 export default function Home() {
   const wishListUrl = "https://www.amazon.jp/hz/wishlist/ls/249DH0KL7DT0K?ref_=wl_share"
+  const devToUrl = "https://dev.to/kaede_io"
   return (
     <div className={styles.container}>
       <Head>
@@ -46,6 +48,7 @@ export default function Home() {
 
         <Button
           href={wishListUrl}
+          target="_blank"
           variant="contained"
           size='large'
           style={{
@@ -57,6 +60,20 @@ export default function Home() {
           <EmojiFoodBeverageIcon />
         </Button>
 
+        <Button
+          href={devToUrl}
+          target="_blank"
+          variant="contained"
+          size='large'
+          style={{
+            background: 'black',
+            color: 'white',
+            marginBottom: '12px'
+          }}
+        >
+          Read my tech blog!
+          <LogoDevIcon />
+        </Button>
 
         <Typography variant="h6" gutterBottom component="div"
             style={{
