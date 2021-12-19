@@ -4,12 +4,18 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Icon } from '@iconify/react';
+import buildingImage from '/assets/images/noA.png'
+import Image from 'next/image'
 
 
 export default function Home() {
   const wishListUrl = "https://www.amazon.jp/hz/wishlist/ls/249DH0KL7DT0K?ref_=wl_share"
   const devToUrl = "https://dev.to/kaede_io"
+  const githubUrl = "https://github.com/kaede0902?tab=repositories"
+
+  const buildingImage = "/noA.png"
   return (
     <div className={styles.container}>
       <Head>
@@ -18,47 +24,44 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Typography variant="caption" display="block" gutterBottom>
-          エンジニア
-        </Typography>
-        <Typography variant="h4" gutterBottom component="div">
-          カエデ (kaede0902)
-        </Typography>
-        <Typography variant="h5" gutterBottom component="div">
-          公式サイト
-        </Typography>
-
-        <p className={styles.description}>
-          
-        </p>
-
-        <Typography variant="caption" display="block" gutterBottom>
-          Web Developer
-        </Typography>
-        <Typography variant="h4" gutterBottom component="div">
-          kaede (kaede0902)
-        </Typography>
-        <Typography variant="h5" gutterBottom component="div">
-          Offical Web Site
-        </Typography>
-        <p className={styles.description}>
-          WELCOME.
-        </p>
-
-        <Button
-          href={wishListUrl}
-          target="_blank"
-          variant="contained"
-          size='large'
-          style={{
-            background: 'yellow',
-            marginBottom: '12px'
-          }}
+      <main 
+        className={styles.main}
+        style={{ backgroundImage: `url(${buildingImage})`}}
+      >
+        <div
+          style={{ color: "white"}}
         >
-          Buy me a coffee!
-          <EmojiFoodBeverageIcon />
-        </Button>
+          <Typography color="tomato" variant="caption" display="block" gutterBottom>
+            エンジニア
+          </Typography>
+          <Typography color="tomato" variant="h4" gutterBottom component="div">
+            カエデ (kaede0902)
+          </Typography>
+          <Typography variant="h5" gutterBottom component="div">
+            公式サイト
+          </Typography>
+        </div>
+
+        <p className={styles.description}>
+        </p>
+
+        <div
+          style={{ color: "white"}}
+        >
+          <Typography variant="caption" display="block" gutterBottom>
+            Web Developer
+          </Typography>
+          <Typography variant="h4" gutterBottom component="div">
+            kaede (kaede0902)
+          </Typography>
+          <Typography variant="h5" gutterBottom component="div">
+            Offical Web Site
+          </Typography>
+          <p className={styles.description}>
+            WELCOME.
+          </p>
+        </div>
+
 
         <Button
           href={devToUrl}
@@ -74,6 +77,39 @@ export default function Home() {
           Read my tech blog!
           <LogoDevIcon />
         </Button>
+
+        <Button
+          href={githubUrl}
+          target="_blank"
+          variant="contained"
+          size='large'
+          style={{
+            background: 'black',
+            color: 'white',
+            marginBottom: '12px'
+          }}
+        >
+          Read my code!
+          <GitHubIcon />
+        </Button>
+
+        <Button
+          href={wishListUrl}
+          target="_blank"
+          variant="contained"
+          size='large'
+          style={{
+            background: 'yellow',
+            marginBottom: '12px'
+          }}
+        >
+          Buy me a coffee!
+          <EmojiFoodBeverageIcon />
+        </Button>
+
+          <Typography variant="h5" gutterBottom component="div" style={{ color: "white"}}>
+            CONTACT
+          </Typography>
 
         <Typography variant="h6" gutterBottom component="div"
             style={{
