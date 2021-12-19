@@ -6,7 +6,6 @@ import EmojiFoodBeverageIcon from '@material-ui/icons/EmojiFoodBeverage';
 import LogoDevIcon from '@mui/icons-material/LogoDev';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Icon } from '@iconify/react';
-import buildingImage from '/assets/images/noA.png'
 import Image from 'next/image'
 
 
